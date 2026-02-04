@@ -4,11 +4,11 @@ import Loader from "./Components/LoaderModule/Loader";
 import Home from "./Components/HomeModule/Home";
 import Gallery from "./Components/GalleryModule/Gallery";
 import Upload from "./Components/UploadModule/Upload";
-import SignUp from "./Components/CommonModule/SignUpModule/SignUp";
+import SignUp from "./Components/AuthModule/SignUpModule/SignUp";
 import Profile from "./Components/ProfileModule/Profile";
 import Error404 from "./Components/CommonModule/ErrorModule/Error404";
 
-// Vercel Analytics & Speed Insights [Do not remove]
+// Vercel Analytics & Speed Insights [Don't remove]
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -35,8 +35,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/gallery/*" element={<Gallery />} />
+
                     <Route path="/upload" element={<Upload />} />
                     <Route path="/signup" element={<SignUp />} />
+
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/*" element={<Error404 />} />
                 </Routes>
